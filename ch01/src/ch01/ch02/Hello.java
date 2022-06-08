@@ -1,4 +1,4 @@
-package ch02;
+package ch01.ch02;
 
 // class: 클래스를 선언하는 예약어 ( reserved word )
 // public 은 다른 패키지의 클래스나 같은 패키지의 클래스에서 모두 접근 가능하게 하는 예약어
