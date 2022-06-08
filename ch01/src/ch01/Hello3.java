@@ -1,4 +1,4 @@
-package ch01.ch01;
+package ch01;
 
 public class Hello3 {
 

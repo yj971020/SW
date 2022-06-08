@@ -1,4 +1,4 @@
-package ch01.ch02;
+package ch02;
 
 public class Test02 {
 	int a=10;
