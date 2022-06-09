@@ -10,6 +10,7 @@ public class HW3 {
 		int num=in.nextInt();
 		int price=0;
 		int totalPrice=0;
+		
 		switch(s) {
 		case "Ä«ÇªÄ¡³ë":
 			price=3000;

@@ -1,4 +1,4 @@
-package ch03;
+package ch03.Arrays;
 
 public class ArrayMinMaxExam {
 	public static void main(String[] args) {

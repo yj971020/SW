@@ -1,4 +1,4 @@
-package ch03;
+package ch03.Arrays;
 
 public class ArrayCopyEx {
 	int[] myArr= {1,2,3,4};
