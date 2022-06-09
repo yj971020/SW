@@ -1,4 +1,4 @@
-package ch03;
+package ch03.Arrays;
 
 public class TwoDArrExam {
 	public static void main(String[] args) {

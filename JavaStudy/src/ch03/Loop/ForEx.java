@@ -1,4 +1,4 @@
-package ch03;
+package ch03.Loop;
 
 public class ForEx {
 	public static void main(String[] args) {
