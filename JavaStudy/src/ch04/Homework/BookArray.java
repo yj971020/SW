@@ -33,9 +33,10 @@ public class BookArray {
 				break;
 			case 2:
 
-				if(findBook()==null) {
+				if (findBook() == null) {
 					System.out.println("해당 책이 없습니다.");
-				};
+				}
+				;
 
 				break;
 			case 3:
@@ -67,16 +68,16 @@ public class BookArray {
 		// 도서배열에서 제목이나 저자가 같은 도서가 있으면
 		// 해당 도서를 생성하여 리턴 하고
 		// 배열내에 제목이나 저자가 같은 도서가 없으면 null을 리턴.
+		Book find = null;
 		for (int i = 0; i < bookArray.length; i++) {
 			if (bookArray[i] != null) {
 				if (title.equals(bookArray[i].title) || author.equals(bookArray[i].author)) {
-					Book find = new Book(title, author);
+					find = new Book(bookArray[i].title, bookArray[i].author);
 					System.out.println(find.toString());
-					return find;
 				}
 			}
 		}
-		return null;
+		return find;
 	}
 
 	static void registerBook() {
