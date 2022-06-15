@@ -34,6 +34,8 @@ public class Bear extends GameObject {
 			case "f": //¿À
 				y = (y + 1) % 20; 
 				break;
+				
+				
 		}
 	}
 

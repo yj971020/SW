@@ -6,6 +6,7 @@ public class Circle implements Shape{
 	public Circle(int radius) {
 		this.radius=radius;
 	}
+	
 	@Override
 	public void draw() {
 		System.out.print("¹ÝÁö¸§"+radius);
@@ -15,5 +16,4 @@ public class Circle implements Shape{
 	public double getArea() {
 		return PI*radius*radius;
 	}
-
 }
