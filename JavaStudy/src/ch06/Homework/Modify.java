@@ -7,10 +7,11 @@ public class Modify {
 		Scanner in= new Scanner(System.in);
 		while(true) {
 			System.out.print(">>");
-			
 			String s= in.nextLine();
 			StringBuffer sb= new StringBuffer(s);
-			if(sb.equals("exit")) {
+			
+			//StringBuffer 객체를 toString 으로 String 으로 바꿔!
+			if(sb.toString().equals("exit")) {  
 				System.out.println("종료합니다..");
 				break;
 			}
