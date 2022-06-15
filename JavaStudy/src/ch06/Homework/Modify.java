@@ -20,7 +20,7 @@ public class Modify {
 				int i=(int)(Math.random()*26); // 알파벳중에 선택
 				char c=(char)('a'+i);
 				
-				if(!sb.equals(c)) {
+				if(!sb.toString().equals(Character.toString(c))) {
 					sb.replace(index, index+1,Character.toString(c));
 					break;
 				}

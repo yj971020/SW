@@ -5,7 +5,7 @@ public class WapperEx2 {
 		// 대문자 -> 소문자
 		System.out.println(Character.toLowerCase('A'));
 		char c1 = '4', c2 = 'F';
-		if ((Character.isDigit(c1))) // c1이 문자이면
+		if ((Character.isDigit(c1))) // c1이 숫자이면
 			System.out.println(c1 + "는 숫자");
 		if ((Character.isAlphabetic(c2)))// 문자 c2 가 영문자 이면
 			System.out.println(c2 + "는 영문자");
