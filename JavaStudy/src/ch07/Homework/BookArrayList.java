@@ -1,6 +1,6 @@
-package ch04.Homework01;
+package ch07.Homework;
 
-
+import java.util.ArrayList;
 import java.util.Scanner;
 
 class Book {
@@ -17,11 +17,11 @@ class Book {
 	}
 }
 
-public class BookArray {
+public class BookArrayList {
 	static int size = 100;
 	static int seq;
 
-	static Book[] bookArray = new Book[size]; // Book 배열 선언
+	static ArrayList<Book> bookArr = new ArrayList<>();
 	static Scanner scanner = new Scanner(System.in);
 
 	public static void main(String[] args) {
@@ -71,10 +71,10 @@ public class BookArray {
 		// 해당 도서를 생성하여 리턴 하고
 		// 배열내에 제목이나 저자가 같은 도서가 없으면 null을 리턴.
 		Book find = null;
-		for (int i = 0; i < bookArray.length; i++) {
-			if (bookArray[i] != null) {
-				if (title.equals(bookArray[i].title) || author.equals(bookArray[i].author)) {
-					find = new Book(bookArray[i].title, bookArray[i].author);
+		for (int i = 0; i < bookArr.size(); i++) {
+			if (bookArr.get(i) != null) {
+				if (title.equals(bookArr.get(i).title) || author.equals(bookArr.get(i).author)) {
+					find = new Book(bookArr.get(i).title, bookArr.get(i).author);
 					System.out.println(find.toString());
 				}
 			}
@@ -88,15 +88,16 @@ public class BookArray {
 		String title = scanner.next();
 		System.out.print("저자>>");
 		String author = scanner.next();
-		bookArray[seq++] = new Book(title, author);
+		bookArr.add(new Book(title, author));
+
 	}
 
 	static void listBook() {
 		// 도서리스트 출력
 		// 배열내의모든 book정보 출력
-		for (int i = 0; i < bookArray.length; i++) {
-			if (bookArray[i] != null)
-				System.out.println(bookArray[i].toString());
+		for (int i = 0; i < bookArr.size(); i++) {
+			if (bookArr.get(i) != null)
+				System.out.println(bookArr.get(i).toString());
 			else
 				break;
 		}
