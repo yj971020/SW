@@ -43,18 +43,14 @@ public class BookArrayList {
 
 				break;
 			case 3:
-				bookArr.sort(new Comparator<Book>() {
-
-					@Override
-					public int compare(Book o1, Book o2) {
-						
-						return o1.title.compareTo(o2.title);
-					}
-				});
 				listBook();
 				break;
 			case 4:
+				bookSort();
+				break;
+			case 5:
 				run = !run;
+				break;
 			}
 		}
 	}
@@ -64,7 +60,9 @@ public class BookArrayList {
 		System.out.println("1.도서등록");
 		System.out.println("2.도서찾기");
 		System.out.println("3.도서리스트");
-		System.out.println("4.종료");
+		System.out.println("4.도서 정렬");
+		System.out.println("5.종료");
+	
 		int menu = scanner.nextInt();
 		scanner.nextLine();
 		return menu;
@@ -110,6 +108,15 @@ public class BookArrayList {
 			else
 				break;
 		}
+	}
+	
+	static void bookSort() {
+		bookArr.sort(new Comparator<Book>() {
+			@Override
+			public int compare(Book o1, Book o2) {
+				return o1.title.compareTo(o2.title);
+			}
+		});
 	}
 	
 	
