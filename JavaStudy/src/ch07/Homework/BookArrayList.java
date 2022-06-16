@@ -1,6 +1,7 @@
 package ch07.Homework;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.Scanner;
 
 class Book {
@@ -42,6 +43,14 @@ public class BookArrayList {
 
 				break;
 			case 3:
+				bookArr.sort(new Comparator<Book>() {
+
+					@Override
+					public int compare(Book o1, Book o2) {
+						
+						return o1.title.compareTo(o2.title);
+					}
+				});
 				listBook();
 				break;
 			case 4:
@@ -102,4 +111,6 @@ public class BookArrayList {
 				break;
 		}
 	}
+	
+	
 }
