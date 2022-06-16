@@ -26,6 +26,7 @@ public class BookArrayList {
 	static Scanner scanner = new Scanner(System.in);
 
 	public static void main(String[] args) {
+		
 		boolean run = true;
 
 		while (run) {
@@ -35,12 +36,9 @@ public class BookArrayList {
 				registerBook();
 				break;
 			case 2:
-
 				if (findBook() == null) {
 					System.out.println("해당 책이 없습니다.");
-				}
-				;
-
+				};
 				break;
 			case 3:
 				listBook();
@@ -117,6 +115,8 @@ public class BookArrayList {
 				return o1.title.compareTo(o2.title);
 			}
 		});
+		//람다식 표현
+		bookArr.sort(( o1,  o2)-> o1.title.compareTo(o2.title));
 	}
 	
 	

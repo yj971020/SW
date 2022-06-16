@@ -28,14 +28,12 @@ public class PointVectorEx {
 				o1.getX()-o2.getX());
 			
 		System.out.println(v.toString());
+		
 		for (int i = 9; i < v.size(); i++) {
 			Point p = v.get(i);
 			System.out.println(p);
 		}
 
-		for (int i = 0; i < v.size(); i++) {
-
-		}
 
 	}
 
