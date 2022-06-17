@@ -1,10 +1,13 @@
 package ch07.Homework;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.Scanner;
 
-class Book {
+//비교 기능을 클래스에서 만듦 implements Comparable<Book>
+class Book implements Comparable<Book>{
 	String title, author;
 
 	public Book(String title, String author) {
@@ -16,10 +19,15 @@ class Book {
 	public String toString() {
 		return "Book [title=" + title + ", author=" + author + "]";
 	}
+
+
+	
+	  @Override public int compareTo(Book o) { return this.hashCode()-o.hashCode();
+	  }
+	 
 }
 
 public class BookArrayList {
-	static int size = 100;
 	static int seq;
 
 	static ArrayList<Book> bookArr = new ArrayList<>();
@@ -109,12 +117,14 @@ public class BookArrayList {
 	}
 	
 	static void bookSort() {
+		//Collections.sort(bookArr);
 		bookArr.sort(new Comparator<Book>() {
 			@Override
 			public int compare(Book o1, Book o2) {
 				return o1.title.compareTo(o2.title);
 			}
 		});
+		
 		//람다식 표현
 		bookArr.sort(( o1,  o2)-> o1.title.compareTo(o2.title));
 	}

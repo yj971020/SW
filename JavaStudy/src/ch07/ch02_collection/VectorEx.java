@@ -1,4 +1,4 @@
-package ch07.ch01_collection_generic;
+package ch07.ch02_collection;
 
 import java.util.Vector;
 
